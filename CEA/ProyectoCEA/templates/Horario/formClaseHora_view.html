@@ -1,0 +1,235 @@
+{% extends "ProyectB/base.html" %}
+
+{% load staticfiles %}
+
+{% block cabezera %}  {% endblock %}
+
+{% block extra %}
+
+<div class="features">
+	<div class="container">
+		<center>
+		<div class="col-md-12 features-right">
+
+			<img src="{% static 'images/f1.jpg' %}" alt=""/>
+			
+		</div>
+		</center>
+		<div class="row">
+	<div class="col-lg-12 text-center">
+		<div class="box">
+			<form method='POST' action=''>
+				<center>
+					{% csrf_token %}
+					<br>
+					<h2 class="intro-text text-center">Registra una clase</strong>
+						<h2 class="intro-text text-center"><strong>{{mensaje}}</strong>
+					</h2>
+					<br>
+					<h3 class="intro-text"><strong>Horario: {{ form.FK_HorarioCarrera }}</strong></h3><br>
+					<h3 class="intro-text"><strong>Hora: {{ form.FK_Hora }} </strong></h3><br>
+					<h3 class="intro-text"><strong>Dia: {{ form.FK_Dia }} </strong></h3><br>
+					<h3 class="intro-text"><strong>Salon: {{ form.FK_Salon }} </strong></h3><br>
+					<h3 class="intro-text"><strong>Profesor: {{ form.FK_Profesor }} </strong></h3><br>
+					<h3 class="intro-text"><strong>Materia: {{ form.FK_Materia }} </strong></h3><br>
+
+					<br>
+					<div class="form-actions">
+						<button type="submit" class="btn btn-lg btn-default">Guardar</button>
+						<a class="btn  btn-lg btn-default" href="/index/">Regresar</a>
+					</div>
+					<br>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#bbb;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#bbb;color:#594F4F;background-color:#E0FFEB;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#bbb;color:#493F3F;background-color:#9DE0AD;}
+.tg .tg-sgp5{font-size:26px;font-family:"Times New Roman", Times, serif !important;;background-color:#32cb00;text-align:center;vertical-align:top}
+.tg .tg-49xk{font-size:26px;font-family:"Times New Roman", Times, serif !important;;text-align:center;vertical-align:top}
+.tg .tg-clha{background-color:#C2FFD6;font-size:12px;font-family:"Times New Roman", Times, serif !important;;text-align:center;vertical-align:top}
+.tg .tg-hnwh{background-color:#C2FFD6;font-size:26px;font-family:"Times New Roman", Times, serif !important;;text-align:center;vertical-align:top}
+</style>
+<table class="tg" style="undefined;table-layout: fixed; width: 727px">
+<colgroup>
+<col style="width: 83px">
+<col style="width: 75px">
+<col style="width: 84px">
+<col style="width: 115px">
+<col style="width: 81px">
+<col style="width: 91px">
+<col style="width: 88px">
+<col style="width: 110px">
+</colgroup>
+  <tr>
+    <th class="tg-sgp5">Hora</th>
+    <th class="tg-49xk">Lunes</th>
+    <th class="tg-49xk">Martes</th>
+    <th class="tg-49xk">Miércoles</th>
+    <th class="tg-49xk">Jueves</th>
+    <th class="tg-49xk">Viernes</th>
+    <th class="tg-49xk">Sábado</th>
+    <th class="tg-49xk">Domingo</th>
+  </tr>
+  <tr>
+    <td class="tg-49xk">7-8</td>
+    <td class="tg-clha">{{ l78 }}</td>
+    <td class="tg-49xk">{{ b78 }}</td>
+    <td class="tg-hnwh">{{ c78 }}</td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+  </tr>
+  <tr>
+    <td class="tg-49xk">8-9</td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+  </tr>
+  <tr>
+    <td class="tg-49xk">9-10</td>
+    <td class="tg-hnwh"><br></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+  </tr>
+  <tr>
+    <td class="tg-49xk">10-11</td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+  </tr>
+  <tr>
+    <td class="tg-49xk">11-12</td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+  </tr>
+  <tr>
+    <td class="tg-49xk">12-13</td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+  </tr>
+  <tr>
+    <td class="tg-49xk">13-14</td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+  </tr>
+  <tr>
+    <td class="tg-49xk">14-15</td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+  </tr>
+  <tr>
+    <td class="tg-49xk">15-16</td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+  </tr>
+  <tr>
+    <td class="tg-49xk">16-17</td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+  </tr>
+  <tr>
+    <td class="tg-49xk">17-18</td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+  </tr>
+  <tr>
+    <td class="tg-49xk">18-19</td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+  </tr>
+  <tr>
+    <td class="tg-49xk">19-20</td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+  </tr>
+  <tr>
+    <td class="tg-49xk">20-21</td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+  </tr>
+  <tr>
+    <td class="tg-49xk">21-22</td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+    <td class="tg-49xk"></td>
+    <td class="tg-hnwh"></td>
+  </tr>
+</table>
+				</center
+				
+					</h2>
+				</form>
+			</div>
+		</div>
+	</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+
+
+{% endblock %}
